@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to ExFlash</h1>
+    <h2>Make sure to write headings in right order</h2>
+    <img src="sampleExcelformat.png" alt="sampleformat" />
+    <h3>One Stop Destionation to your revision</h3>
+    <div class="conatiner mt-5 row">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <input
+          class="form-control"
+          type="file"
+          id="input"
+          accept=".xls,.xlsx"
+        />
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary" id="button">Generate Question</button>
+      </div>
+    </div>
+    <div class="col-md-12 text-center hide" id="queCon">
+      <div id="que"></div>
+      <div id="opt1" onclick="verify(1)"></div>
+      <div id="opt2" onclick="verify(2)"></div>
+      <div id="opt3" onclick="verify(3)"></div>
+      <div id="opt4" onclick="verify(4)"></div>
+      <p class="result"></p>
+      <button id="next" onclick="nextQue()">Next</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
